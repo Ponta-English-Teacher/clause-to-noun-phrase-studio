@@ -1,16 +1,13 @@
 const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyyQ51iuEfmlY2jptmI-I5jkAnEWCQyH9n5VoRfvkRUp-OZkgiufzeP5moHtqtJNFV92A/exec";
 const VERCEL_API_PROXY_URL = "/api/record"; // This is the endpoint for your Vercel serverless function
 
-// ... (later in the recordAnswer function) ...
-        const response = await fetch(VERCEL_API_PROXY_URL, {
-
 let currentQuestionIndex = 0;
 let questions = [];
 
 // Load questions from JSON
 async function loadQuestions() {
   try {
-    const response = await fetch("questions.json");
+    const response = await fetch("questions.json"); // Corrected path for Vercel serving
     questions = await response.json();
     showQuestion();
   } catch (error) {
@@ -39,7 +36,7 @@ function showAnswer() {
   const correct = question.answers ? question.answers.join(" / ") : "(No answer available)";
   const explanation = question.explanation || "(No explanation provided.)";
 
-  document.getElementById("feedback").innerHTML = 
+  document.getElementById("feedback").innerHTML =
     `<strong>Answer:</strong> ${correct}<br><strong>Explanation:</strong> ${explanation}`;
   document.getElementById("feedback").style.display = "block";
 }
@@ -80,7 +77,7 @@ function nextQuestion() {
   }
 }
 
-// Send data to backend (API proxy)
+// Send data to backend (API proxy) - Declared async to use await
 async function recordAnswer(questionId, userAnswer, isCorrect) {
   try {
     const payload = {
@@ -89,7 +86,8 @@ async function recordAnswer(questionId, userAnswer, isCorrect) {
       isCorrect
     };
 
-    const response = await fetch(SHEET_WEB_APP_URL, {
+    // Correctly using the Vercel API proxy URL
+    const response = await fetch(VERCEL_API_PROXY_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
