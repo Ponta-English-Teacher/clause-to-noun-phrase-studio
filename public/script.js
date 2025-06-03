@@ -1,10 +1,9 @@
-// Replace this with your actual deployed Apps Script URL
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyyQ51iuEfmlY2jptmI-I5jkAnEWCQyH9n5VoRfvkRUp-OZkgiufzeP5moHtqtJNFV92A/exec";
+const SHEET_WEB_APP_URL = "/api/record";
 
 let currentQuestionIndex = 0;
 let questions = [];
 
-// Load questions from local JSON file
+// Load questions from JSON
 async function loadQuestions() {
   try {
     const response = await fetch("questions.json");
@@ -35,12 +34,13 @@ function showAnswer() {
   const question = questions[currentQuestionIndex];
   const correct = question.answers ? question.answers.join(" / ") : "(No answer available)";
   const explanation = question.explanation || "(No explanation provided.)";
-  document.getElementById("feedback").innerHTML =
+
+  document.getElementById("feedback").innerHTML = 
     `<strong>Answer:</strong> ${correct}<br><strong>Explanation:</strong> ${explanation}`;
   document.getElementById("feedback").style.display = "block";
 }
 
-// Handle user submission
+// Submit the user's answer
 function submitAnswer() {
   const userInputRaw = document.getElementById("input-answer").value.trim();
   const userInputLower = userInputRaw.toLowerCase();
@@ -57,11 +57,11 @@ function submitAnswer() {
   document.getElementById("feedback").innerHTML = message;
   document.getElementById("feedback").style.display = "block";
 
-  // Record to Google Sheets
+  // Send answer to Google Sheet via Vercel proxy
   recordAnswer(question.id, userInputRaw, isCorrect);
 }
 
-// Move to the next question
+// Go to the next question
 function nextQuestion() {
   if (currentQuestionIndex < questions.length - 1) {
     currentQuestionIndex++;
@@ -76,7 +76,7 @@ function nextQuestion() {
   }
 }
 
-// Send submission result to Google Sheets via Apps Script
+// Send data to backend (API proxy)
 async function recordAnswer(questionId, userAnswer, isCorrect) {
   try {
     const payload = {
@@ -100,7 +100,7 @@ async function recordAnswer(questionId, userAnswer, isCorrect) {
   }
 }
 
-// Attach button actions when the page loads
+// Hook up buttons and load questions on page load
 window.onload = () => {
   loadQuestions();
   document.getElementById("btn-submit").onclick = submitAnswer;
