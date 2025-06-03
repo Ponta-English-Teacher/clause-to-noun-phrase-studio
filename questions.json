@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "context": "Office surprise",
+    "prompt": "__________ early shocked everyone.",
+    "cue": "he, leaves",
+    "answers": ["His leaving"],
+    "explanation": "A gerund phrase: 'His leaving' functions as the subject."
+  },
+  {
+    "id": 2,
+    "context": "Roommate complaint",
+    "prompt": "__________ so loudly is annoying.",
+    "cue": "she, sings",
+    "answers": ["Her singing"],
+    "explanation": "Gerund subject using possessive pronoun: 'Her singing'."
+  },
+  {
+    "id": 3,
+    "context": "Flight delay",
+    "prompt": "__________ late caused a problem.",
+    "cue": "they, arrive",
+    "answers": ["Their arriving", "Their late arrival"],
+    "explanation": "Both gerund ('Their arriving') and noun phrase ('Their late arrival') are valid."
+  },
+  {
+    "id": 4,
+    "context": "Exam result",
+    "prompt": "__________ the test shocked his teacher.",
+    "cue": "he, failed",
+    "answers": ["His failing", "His test failure"],
+    "explanation": "Gerund or nominalization: 'His failing' / 'His test failure'."
+  },
+  {
+    "id": 5,
+    "context": "Moving news",
+    "prompt": "__________ to Tokyo excites me.",
+    "cue": "we will move",
+    "answers": ["Our moving", "Our move"],
+    "explanation": "Gerund or noun phrase both work."
+  },
+  {
+    "id": 6,
+    "context": "Company memo",
+    "prompt": "The company’s __________ to close the branch shocked employees.",
+    "cue": "decide",
+    "answers": ["decision"],
+    "explanation": "Nominalization from verb 'decide' → 'decision'."
+  },
+  {
+    "id": 7,
+    "context": "Lab report",
+    "prompt": "The __________ of the problem occurred during testing.",
+    "cue": "discover",
+    "answers": ["discovery"],
+    "explanation": "Nominalization from verb 'discover' → 'discovery'."
+  },
+  {
+    "id": 8,
+    "context": "Board meeting",
+    "prompt": "The board’s __________ of the new rule was unanimous.",
+    "cue": "approve",
+    "answers": ["approval"],
+    "explanation": "Noun form: 'approval'."
+  },
+  {
+    "id": 9,
+    "context": "Debate summary",
+    "prompt": "Their __________ of the proposal surprised everyone.",
+    "cue": "reject",
+    "answers": ["quick rejection"],
+    "explanation": "Adjective + noun: 'quick rejection'."
+  },
+  {
+    "id": 10,
+    "context": "Climate article",
+    "prompt": "The __________ that the climate is changing alarmed the public.",
+    "cue": "observe",
+    "answers": ["observation"],
+    "explanation": "Nominalized clause: 'The observation that...'."
+  },
+  {
+    "id": 11,
+    "context": "Mechanic diary",
+    "prompt": "His __________ to fix the machine failed.",
+    "cue": "try",
+    "answers": ["attempt"],
+    "explanation": "Nominal form: 'attempt to fix'."
+  },
+  {
+    "id": 12,
+    "context": "Friend story",
+    "prompt": "Her __________ to quit was surprising.",
+    "cue": "decide",
+    "answers": ["decision"],
+    "explanation": "Standard nominalization: 'Her decision to quit'."
+  },
+  {
+    "id": 13,
+    "context": "Sports dream",
+    "prompt": "Their __________ to win the competition was strong.",
+    "cue": "hope",
+    "answers": ["hope"],
+    "explanation": "Noun phrase expressing desire: 'hope to win'."
+  },
+  {
+    "id": 14,
+    "context": "Urgent email",
+    "prompt": "The __________ to respond quickly is urgent.",
+    "cue": "need",
+    "answers": ["need"],
+    "explanation": "Nominalization: 'The need to respond'."
+  },
+  {
+    "id": 15,
+    "context": "Difficult conversation",
+    "prompt": "His __________ to help her disappointed everyone.",
+    "cue": "refuse",
+    "answers": ["refusal"],
+    "explanation": "Noun phrase: 'His refusal to help'."
+  },
+  {
+    "id": 16,
+    "context": "Gossip recap",
+    "prompt": "The __________ that she lied is undeniable.",
+    "cue": "**",
+    "answers": ["fact"],
+    "explanation": "Noun clause starting with 'The fact that...'."
+  },
+  {
+    "id": 17,
+    "context": "Engineering marvel",
+    "prompt": "__________ amazed everyone.",
+    "cue": "how did he solve the problem?",
+    "answers": ["How he solved the problem"],
+    "explanation": "Wh-clause functions as subject."
+  },
+  {
+    "id": 18,
+    "context": "Event uncertainty",
+    "prompt": "__________ is still unknown.",
+    "cue": "Will he come?",
+    "answers": ["Whether he will come", "Whether he will come or not"],
+    "explanation": "Both full and reduced forms of the clause are fine."
+  },
+  {
+    "id": 19,
+    "context": "Group plan",
+    "prompt": "__________ is unclear.",
+    "cue": "What should we do next?",
+    "answers": ["What to do next"],
+    "explanation": "Wh-to-infinitive noun phrase."
+  },
+  {
+    "id": 20,
+    "context": "Lost contact",
+    "prompt": "__________ was not specified.",
+    "cue": "Who should we contact?",
+    "answers": ["Who to contact"],
+    "explanation": "Embedded question phrase as subject."
+  },
+  {
+    "id": 21,
+    "context": "Publication",
+    "prompt": "The report __________ was published.",
+    "cue": "write, Dr. Smith",
+    "answers": ["written by Dr. Smith"],
+    "explanation": "Reduced passive: 'written by Dr. Smith'."
+  },
+  {
+    "id": 22,
+    "context": "Tool shelf",
+    "prompt": "The tool __________ is on the shelf.",
+    "cue": "use, measure blood pressure",
+    "answers": ["used for measuring blood pressure"],
+    "explanation": "Reduced passive using prepositional phrase."
+  },
+  {
+    "id": 23,
+    "context": "Bakery review",
+    "prompt": "The cake __________ was delicious.",
+    "cue": "make, rice flour",
+    "answers": ["made with rice flour"],
+    "explanation": "Reduced relative clause with passive + 'with'."
+  },
+  {
+    "id": 24,
+    "context": "NASA article",
+    "prompt": "The technique __________ is now used in smartphones.",
+    "cue": "develop, NASA",
+    "answers": ["developed by NASA"],
+    "explanation": "Past participle phrase showing source."
+  },
+  {
+    "id": 25,
+    "context": "Email error",
+    "prompt": "The email __________ was not received.",
+    "cue": "send, attachment",
+    "answers": ["sent with an attachment"],
+    "explanation": "Reduced relative clause with passive + 'with'."
+  }
+]
