@@ -1,4 +1,4 @@
-const SHEET_WEB_APP_URL = "/api/record";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyyQ51iuEfmlY2jptmI-I5jkAnEWCQyH9n5VoRfvkRUp-OZkgiufzeP5moHtqtJNFV92A/exec";
 
 let currentQuestionIndex = 0;
 let questions = [];
