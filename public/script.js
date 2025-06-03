@@ -1,4 +1,8 @@
 const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyyQ51iuEfmlY2jptmI-I5jkAnEWCQyH9n5VoRfvkRUp-OZkgiufzeP5moHtqtJNFV92A/exec";
+const VERCEL_API_PROXY_URL = "/api/record"; // This is the endpoint for your Vercel serverless function
+
+// ... (later in the recordAnswer function) ...
+        const response = await fetch(VERCEL_API_PROXY_URL, {
 
 let currentQuestionIndex = 0;
 let questions = [];
