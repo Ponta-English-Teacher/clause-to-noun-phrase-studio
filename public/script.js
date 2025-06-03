@@ -10,7 +10,7 @@ let questions = [];
 // Load questions from JSON
 async function loadQuestions() {
   try {
-    const response = await fetch("questions.json");
+    const response = await fetch("public/questions.json");
     questions = await response.json();
     showQuestion();
   } catch (error) {
